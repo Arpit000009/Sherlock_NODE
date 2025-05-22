@@ -20,3 +20,8 @@
 1747858909922:GET: /api/users/1009
 1747858910853:GET: /api/users/1009
 1747859045049:::1 GET: /api/users/1009
+1747895641037:::1 GET: /api/users
+1747895930071:::1 GET: /api/users
+1747896079877:::1 GET: /api/users
+1747896260808:::1 GET: /api/users
+1747896483780:::1 POST: /api/users

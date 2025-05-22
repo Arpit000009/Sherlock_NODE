@@ -26,6 +26,9 @@ app.get('/users',(req,res) =>{
 })
 
 app.get('/api/users',(req,res) =>{
+    res.header('X-myName','Arpit Pandey')
+    // always add X to custum headers
+    // console.log(req.headers);
     return res.json(users);
 })
 
