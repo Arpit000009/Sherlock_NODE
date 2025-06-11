@@ -11,7 +11,10 @@ async function handleGenrateNewShortURL(req,res){
         vistHistory:{}
     });
 
-    return res.json({id: shortID})
+    return res.render("home",{
+        id: shortID,
+    })
+    
 }
 
 async function handleDeleteShortURL(req, res) {
