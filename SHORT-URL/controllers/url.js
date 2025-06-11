@@ -26,7 +26,17 @@ async function handleDeleteShortURL(req, res) {
     return res.status(200).json({ message: 'Short URL deleted successfully' });
 }
 
+async function handleGetAnalytics(req,res){
+    const shortId = req.params.shortId;
+    const result = await URL.findOne({shortId});
+    return res.json({
+        totalClicks:result.visitHistory.length, analytics:result.visitHistory,
+
+    });
+}
+
 module.exports = {
     handleGenrateNewShortURL,
-    handleDeleteShortURL
+    handleDeleteShortURL,
+    handleGetAnalytics
 }
