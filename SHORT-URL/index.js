@@ -19,15 +19,16 @@ app.use(express.urlencoded({extended:false}))
 app.use("/url",urlRoute);
 app.use('/',staticRoute)
 
-app.get("/test",async(req,res)=>{
-    const allUrls = await URL.find({});
-    return res.render('home',{
-        urls:allUrls,
+// app.get("/test",async(req,res)=>{
+//     const allUrls = await URL.find({});
+//     return res.render('home',{
+//         urls:allUrls,
         
-    })
-});
+//     })
+// });
 
 app.use("/url",urlRoute)
+app.use("/",staticRoute)
 
 app.get('/:shortId', async (req, res) => {
   const shortId = req.params.shortId;
