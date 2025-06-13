@@ -15,10 +15,11 @@ async function handleUserLogin(req, res) {
     const {email,password} = req.body;
     const user = await User.findOne({email,password});
     console.log("User",user)
-    if(!user) return res.redirect('/login',{
+    if(!user) 
+        return res.render('login',{
         error:"invalid Username or password",
     });
-    return res.redirect("home");
+    return res.redirect("/");
 }
 
 module.exports = {
