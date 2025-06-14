@@ -1,4 +1,4 @@
-# 🔗 URL Shortener (MERN Stack)
+# 🔗 URL Shortener (MERN Stack)(click on short url folder)
 
 A simple and secure URL shortener built using **Node.js**, **Express**, **MongoDB**, and **EJS**. Users can register, log in, shorten URLs, view analytics, and manage their personal links.
 
