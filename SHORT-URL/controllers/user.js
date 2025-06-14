@@ -1,34 +1,32 @@
-const User = require('../model/user')
-const {v4: uuidv4} = require('uuid')
-const {setUser} = require("../service/auth")
+const User = require("../model/user");
+const { setUser } = require("../service/auth");
 
 async function handleUserSignup(req, res) {
-    const {name,email,password} = req.body;
-    await User.create({
-        name,
-        email,
-        password,
-    });
-    return res.render('home');
+  const { name, email, password } = req.body;
+  try {
+    await User.create({ name, email, password });
+    return res.redirect("/login");
+  } catch (err) {
+    return res.status(500).send("Error signing up user");
+  }
 }
 
-
 async function handleUserLogin(req, res) {
-    const {email,password} = req.body;
-    const user = await User.findOne({email,password});
-    console.log("User",user)
-    if(!user) 
-        return res.render('login',{
-        error:"invalid Username or password",
-    });
+  const { email, password } = req.body;
+  const user = await User.findOne({ email, password });
 
-    
-    const token = setUser(user);
-    res.cookie('uid',token);
-    return res.redirect("/");
+  if (!user) {
+    return res.render("login", {
+      error: "Invalid Username or Password",
+    });
+  }
+
+  const token = setUser(user);
+  res.cookie("uid", token);
+  return res.redirect("/");
 }
 
 module.exports = {
-    handleUserSignup,
-    handleUserLogin,
-}
+  handleUserSignup,
+  handleUserLogin,
+};
