@@ -29,35 +29,33 @@ A simple and secure URL shortener built using **Node.js**, **Express**, **MongoD
 
 ## 📂 Project Structure
 
-url-shortener/
-│
-├── controllers/
-│ ├── url.js
-│ └── user.js
-├── middleware/
-│ └── auth.js
-├── model/
-│ ├── url.js
-│ └── user.js
-├── routes/
-│ ├── url.js
-│ ├── user.js
-│ └── staticRouter.js
-├── service/
-│ └── auth.js
-├── views/
-│ ├── home.ejs
-│ ├── login.ejs
-│ └── signup.ejs
-├── connect.js
-├── index.js
-├── .gitignore
-├── package.json
-└── README.md
+url-shortener/                                                                           
+│                                                                                          
+├── controllers/                                                                                
+│ ├── url.js                                                                                    
+│ └── user.js                                                                                   
+├── middleware/                                                                                 
+│ └── auth.js                                                                                 
+├── model/                                                                                    
+│ ├── url.js                                                                                    
+│ └── user.js                                                                                   
+├── routes/                                                                                     
+│ ├── url.js                                                                                    
+│ ├── user.js                                                                                   
+│ └── staticRouter.js                                                                           
+├── service/                                                                                    
+│ └── auth.js                                                                                   
+├── views/                                                                                    
+│ ├── home.ejs                                                                                 
+│ ├── login.ejs                                                                                 
+│ └── signup.ejs                                                                              
+├── connect.js                                                                                 
+├── index.js                                                                                    
+├── .gitignore                                                                                 
+├── package.json                                                                                
+└── README.md                                                                                   
 
-yaml
-Copy
-Edit
+
 
 ---
 
